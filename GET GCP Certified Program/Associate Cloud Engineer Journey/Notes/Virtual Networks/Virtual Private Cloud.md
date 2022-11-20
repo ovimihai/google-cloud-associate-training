@@ -26,6 +26,8 @@ VPC Objects
     - they are a construct of individual IP addresses within the network
     - has no IP address range
     - is global and spans on all available regions
+    
+- Subnets - allow you to devide networks
     - contains subnetworks (regional)
     - Example 1:
         - ![](../media/gcnet_ex1.png)
@@ -34,11 +36,96 @@ VPC Objects
             - the traffic doesn't touch the real internet
             - it passes through Google Edge routers
             - has a different billing and security ramifications
-- Subnets - allow you to devide networks
+    - Example 2:
+        - ![](../media/gcnet_vpn__vm_regions.png)
+        - you can use only an on-prem VPN to securely connecto to both vms from different regions
+        - this reduces cost and net management complexity
+        - subnets cand cross zones
+        - ![](../media/gcnet_subnet_cross.png)
+        - every sunet hat 4 reserved UO addresses in its primary IP range
+            - .0, .1 - reserved for the network
+            - last and second to last reserved for broadcast
+        - a single firewall rule can be used for both vms
+        - you can expand subnets without re-creating instances
+            - can have more VMs in one region as another
+            - cannot overlap with other subnets
+            - IP range must be unique valid CIDR block
+            - new subnet IP ranges have to fall within valid IP ranges
+            - can expand but not shrink
+            - automode can be expanded from /20 to /16
+            - avoid large subnets - use what you actually need
+        - Demo: Expand subnet
+            - subnet with /29 - 4 vms created, try to create one more
+            - expand network to /23
+            - instance creation resumed and succeded
 - Regions - Google Datacenters
 - Zones
 - IP addresses - internal, external, ranges
+    - each VM can have 2 ips: 
+        - internal 
+            - internal assigned by DHCP, lease 24h
+            - symbolic name registered in an internal network-scoped DNS that translates the name into the internal IP
+                - can translate VM names and URLs inside the same network
+                - can't translate from different networks
+        - external(optional) types:
+            - assigned from pool (ephemeral)
+            - reserved (static) - this costs more unused than an ephemeral one
+            - Bring your own ip
+                - need to own and bring a /24 block
+            - unknown to the internals of the VM
+    - there are some phisical hardware limitations - check quotas (per region/
+    zone)
+    - DNS resolution for internal addresses
+        - each instance has a hostname that can be resolved to an internal IP address
+            - the hostname is the same as the instance name
+            - FQDN (fully qualified domain name)is:
+                - [hostname].[zone].c.[project-id].internal 
+        - name resolutions is handeled by internal DNS resolver:
+            - provided as part of Compute engine (169.254.169.254)
+            - configured for use on instance via DHCP
+            - provides answer for internal and external addresses
+        - VMs don't know about the external IP but have a mapping between external and internal
+    - DNS resolution for external addresses
+        - Instances with external IP addresses can allow connection from hosts outside the project
+            - users connect directly using external IP addresses
+            - admins can publish public DNS records pointing to the instance (not automatically)
+        - DNS record for external addresses can be published using external DNS servers
+        - DNS zone can be hosted using Cloud DNS
+    - **Cloud DNS**
+        - scalable, reliable, managed DNS in Google
+        - translate domain names into IP addresses
+        - low latency, high availability (sla 100% uptime)
+        - manageble via UI, cli, API
+    - Alias IP ranges
+        - define alias IP for different services/containers inside a VM
+    - [IP Ranges list](https://www.gstatic.com/ipranges/cloud.json)        
 - Routes
+    - Every network has:
+        - routes that let instances in a network send traffic directly to each other
+        - a default route that directs packets to destinations that are outside the network
+    - Firewall rules must also allow the packet
+    - manually created networks don't have this rules
+    - Routes map traffic to destination networks
+        - apply to traffic egressing a VM
+        - forward traffic to most specific route
+        - are created whan a subnet is created
+        - enable VMs on a same network to communicate
+        - destination is in CIDR notation
+        - traffic is delivered only if it also matches a firewall rule
 - Firewall routes
+    - protect your VM instances from unapproved connections
+        - VPC network functions as a distributed firewall
+        - firewall rules are applied to the network as a whole
+        - connections are allowd or denied at the instance level
+        - firewall rules are statefull - allow bidirectional communication once a session is established
+        - an implied *deny all ingress*  and *allow all egress* rules exist if none defined
+        - ![](../media/gcnet_route_map.png)
+        - ![](../media/gcnet_fw_egress.png)
+        - ![](../media/gcnet_fw_ingress.png)
+- Pricing
+    - ![](../media/gcnet_pricing.png)
+    - Exceptions
+        - ingress when a LB does processing
+    - ![](../media/gcnet_pricing_ip.png)
 
 
