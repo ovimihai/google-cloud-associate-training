@@ -3,7 +3,7 @@
 # Weekly recordings & presentations
 
 ### Week 1
-[![Week 1](https://img.youtube.com/vi/i37Pu-lQRn0/0.jpg)](https://www.youtube.com/watch?v=i37Pu-lQRn0 "Week 1")
+[![Week 1](https://img.youtube.com/vi/i37Pu-lQRn0/0.jpg)](https://www.youtube.com/watch?v=i37Pu-lQRn0 "Week 1")<br />
 [KickOff Deck](docs/ACE03-GETCERTIFIED_2022.09.27%20-%20KickOff%20Deck.pdf) - 
 [Presentation 1](docs/ACE_Open_Week1.pdf)
 
