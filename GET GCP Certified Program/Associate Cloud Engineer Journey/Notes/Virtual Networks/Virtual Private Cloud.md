@@ -63,6 +63,7 @@ VPC Objects
 - IP addresses - internal, external, ranges
     - each VM can have 2 ips: 
         - internal 
+            - only this can be viewed inside the machine `ifconfig`
             - internal assigned by DHCP, lease 24h
             - symbolic name registered in an internal network-scoped DNS that translates the name into the internal IP
                 - can translate VM names and URLs inside the same network
@@ -127,5 +128,21 @@ VPC Objects
     - Exceptions
         - ingress when a LB does processing
     - ![](../media/gcnet_pricing_ip.png)
+- Common network designs
+    - deploy in multiple zones of the same region
+        - increase availiability
+        - prevent issues due to hardware and software failures
+    - deploy in multiple regions
+        - globalization
+        - better latency
+        - lower network costs
+    - recommendation: assign ony internal IP addresses whenever possible
+    - use **Cloud NAT** for provisioning instances without public IP addresses
+        - lets them access internet in a controlled and efficient manner
+    - allow Private Google Access for instances that have only internal IP
+        - on a subnet basis
+        - allows access to Google services without extrnal IP
+        ![Private Google Access](https://cloud.google.com/static/vpc/images/private-google-access.svg)
+
 
 
