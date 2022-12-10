@@ -8,7 +8,7 @@
 
 ### Courses
 - [Essential Google Cloud Infrastructure: Foundation](/Cloud%20Skills%20Boost/Google%20Cloud%20Fundamentals/Foundation/00.Readme.md) - [Site](https://www.cloudskillsboost.google/course_templates/50)
-- [Essential Google Cloud Infrastructure: Core Services](/Cloud%20Skills%20Boost/Google%20Cloud%20Fundamentals/Core%20Services/00.Readme.md) - [Site](https://www.cloudskillsboost.google/course_templates/49)
+- [Essential Google Cloud Infrastructure: Core Services](/Cloud%20Skills%20Boost/Google%20Cloud%20Fundamentals/Core%20Infrastructure/00.Introduction.md) - [Site](https://www.cloudskillsboost.google/course_templates/49)
 - Elastic Google Cloud Infrastructure: Scaling and Automation - [Site](https://www.cloudskillsboost.google/course_templates/178)
 - Reliable Google Cloud Infrastructure: Design and Process - [Site](https://www.cloudskillsboost.google/course_templates/41)
 - Getting Started with Google Kubernetes Engine - [Site](https://www.cloudskillsboost.google/course_templates/2)
