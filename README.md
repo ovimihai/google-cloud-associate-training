@@ -11,4 +11,5 @@ A collection of materials used in my training to get the GCP Associate Certifica
 ## Links
 - [Google Cloud Services Cheat sheet](https://googlecloudcheatsheet.withgoogle.com/)
 - [Learning Platform](https://www.cloudskillsboost.google/)
+- [GCP CLI Cheatsheet](https://cloud.google.com/static/sdk/docs/images/gcloud-cheat-sheet.pdf)
 
