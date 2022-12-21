@@ -1,7 +1,7 @@
 # google-cloud-associate-training
 A collection of materials used in my training to get the GCP Associate Certification
 
-- [Start](https://cloud.google.com/certification/cloud-engineer)
+- [Exam Details](https://cloud.google.com/certification/cloud-engineer)
 - [Exam Topics](https://cloud.google.com/certification/guides/cloud-engineer)
 
 
@@ -10,6 +10,7 @@ A collection of materials used in my training to get the GCP Associate Certifica
     - got Cloud Skills Bost free for 7 days
     - needed to finish 3 labs to get to the next step
 - [Associate Cloud Engineer Journey](/GET%20GCP%20Certified%20Program/02.Associate%20Cloud%20Engineer%20Journey/Readme.md)
+    - [learning plan](GET%20GCP%20Certified%20Program/02.Associate%20Cloud%20Engineer%20Journey/docs/ACE03-GETCERTIFIED_2022.09.27_LEARNING_PLAN.pdf)
     - got Cloud Skills Bost free for 2 months
     - needed to finish two badges to get the free voucher
 
