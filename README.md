@@ -13,6 +13,8 @@ A collection of materials used in my training to get the GCP Associate Certifica
     - [learning plan](GET%20GCP%20Certified%20Program/02.Associate%20Cloud%20Engineer%20Journey/docs/ACE03-GETCERTIFIED_2022.09.27_LEARNING_PLAN.pdf)
     - got Cloud Skills Bost free for 2 months
     - needed to finish two badges to get the free voucher
+- [Professional Cloud Architect Journey](/GET%20GCP%20Certified%20Program/03.Professional%20Cloud%20Architect%20Jurney/Readme.md)
+    - [learning plan](GET%20GCP%20Certified%20Program/03.Professional%20Cloud%20Architect%20Jurney/docs/PCA03-GETCERT_2023.05.30%20LEARNING%20PLAN%20+%20PROGRAM%20DETAILS.pdf)
 
 ## Cheat Sheets
 - [Services](https://googlecloudcheatsheet.withgoogle.com/)
@@ -20,10 +22,6 @@ A collection of materials used in my training to get the GCP Associate Certifica
 - [Databases](https://cloud.google.com/products/databases)
 - [CLI](https://cloud.google.com/static/sdk/docs/images/gcloud-cheat-sheet.pdf)
 - [K8S](https://lightrun.com/kubectl-cheat-sheet/)
-
-## Trial exams
-- [examtopics.com](https://www.examtopics.com/exams/google/associate-cloud-engineer/)
-- [skillcertpro.com](https://skillcertpro.com/product/google-cloud-certified-associate-cloud-engineer-practice-exam-set/)
 
 
 ## Links
