@@ -17,3 +17,10 @@
 - Automating Infrastructure on Google Cloud with Terraform (quest) - [Site](https://www.cloudskillsboost.google/quests/159)
 
 
+### Case studies
+
+- [EHR Healthcare](docs/master_case_study_ehr_healthcare.pdf)
+- [Helicopter Racing League](docs/master_case_study_helicopter_racing_league.pdf)
+- [Mountkirk Games](docs/master_case_study_mountkirk_games.pdf)
+- [TerramEarth](docs/master_case_study_terramearth.pdf)
+
